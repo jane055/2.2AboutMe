@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">Jane</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">Jane です. \n\n Love coffee and chocolate (i mean, who doesn\'t like it?)
+        \n Prefers manga over a thick novel. (can i still say i love reading? xD)
+        \n Dislikes cheese and mayo. Oh, and also mustard. And milk. Yuck.
+        \n\n That's all. \n\n Bye.\n\n
+    </string>
+</resources>
