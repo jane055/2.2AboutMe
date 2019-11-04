@@ -17,20 +17,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.done_button).setOnClickListener {
             addNickname(it)
-            // Hide the keyboard.
-            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
         }
-
         findViewById<TextView>(R.id.nickname_text).setOnClickListener {
             updateNickname(it)
         }
     }
 
 
-    private fun clickHandlerFunction (viewThatIsClicked: View){
 
-    }
 
     private fun addNickname (view:View){
         val editText = findViewById<EditText>(R.id.nickname_edit)
@@ -39,20 +33,14 @@ class MainActivity : AppCompatActivity() {
         editText.visibility = View.GONE
         view.visibility = View.GONE
         nicknameTextView.visibility = View.VISIBLE
+        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
-
     private fun updateNickname (view: View) {
         val editText = findViewById<EditText>(R.id.nickname_edit)
         val doneButton = findViewById<Button>(R.id.done_button)
         editText.visibility = View.VISIBLE
         doneButton.visibility = View.VISIBLE
         view.visibility = View.GONE
-
-        // Set the focus to the edit text.
-        editText.requestFocus()
-
-        // Show the keyboard.
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.showSoftInput(editText, 0)
     }
 }
